@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="cdbe-modl-build" />
+        <module name="cdbe-modl-client" />
+        <module name="cdbe-modl-common" />
+        <module name="cdbe-modl-designer" />
+        <module name="cdbe-modl-gateway" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="cdbe-modl" target="1.5" />
+      <module name="cdbe-modl-build" target="1.5" />
+      <module name="cdbe-modl-client" target="1.8" />
+      <module name="cdbe-modl-common" target="1.8" />
+      <module name="cdbe-modl-designer" target="1.8" />
+      <module name="cdbe-modl-gateway" target="1.8" />
+      <module name="cdbe-modl-web-gateway" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

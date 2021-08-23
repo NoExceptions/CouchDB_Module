@@ -1,0 +1,7 @@
+com\dm\couchdb\LCConnectionSetting.class
+com\dm\couchdb\GatewayHook.class
+com\dm\couchdb\GatewayHook$1.class
+com\dm\couchdb\web\records\LCSettingsRecord.class
+com\dm\couchdb\GatewayScriptModule.class
+com\dm\couchdb\web\LCSettingsPage.class
+com\dm\couchdb\LightCouch.class

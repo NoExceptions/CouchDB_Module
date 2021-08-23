@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/cdbe-modl.iml" filepath="$PROJECT_DIR$/cdbe-modl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cdbe-modl-build/cdbe-modl-build.iml" filepath="$PROJECT_DIR$/cdbe-modl-build/cdbe-modl-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cdbe-modl-client/cdbe-modl-client.iml" filepath="$PROJECT_DIR$/cdbe-modl-client/cdbe-modl-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cdbe-modl-common/cdbe-modl-common.iml" filepath="$PROJECT_DIR$/cdbe-modl-common/cdbe-modl-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cdbe-modl-designer/cdbe-modl-designer.iml" filepath="$PROJECT_DIR$/cdbe-modl-designer/cdbe-modl-designer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cdbe-modl-gateway/cdbe-modl-gateway.iml" filepath="$PROJECT_DIR$/cdbe-modl-gateway/cdbe-modl-gateway.iml" />
+    </modules>
+  </component>
+</project>

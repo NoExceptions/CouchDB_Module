@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/cdbe-modl-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cdbe-modl-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cdbe-modl-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cdbe-modl-designer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cdbe-modl-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cdbe-modl-gateway/src/main/resources" charset="UTF-8" />
+  </component>
+</project>
