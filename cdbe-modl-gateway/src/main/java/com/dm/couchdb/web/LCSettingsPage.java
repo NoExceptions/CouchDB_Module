@@ -17,6 +17,7 @@ public class LCSettingsPage extends RecordActionTable<LCSettingsRecord> {
 
     @Override
     protected RecordMeta<LCSettingsRecord> getRecordMeta() {
+
         return LCSettingsRecord.META;
     }
 

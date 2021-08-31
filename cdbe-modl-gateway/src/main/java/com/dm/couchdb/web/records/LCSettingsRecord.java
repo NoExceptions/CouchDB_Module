@@ -1,7 +1,14 @@
 package com.dm.couchdb.web.records;
 
 import com.inductiveautomation.ignition.gateway.localdb.persistence.*;
+
+import com.inductiveautomation.ignition.gateway.web.components.editors.PasswordEditorSource;
+import org.apache.wicket.Component;
+import org.apache.wicket.markup.html.form.PasswordTextField;
 import simpleorm.dataset.SFieldFlags;
+import simpleorm.dataset.SRecordInstance;
+
+import javax.swing.*;
 
 public class LCSettingsRecord extends PersistentRecord {
 
@@ -18,10 +25,12 @@ public class LCSettingsRecord extends PersistentRecord {
     public static final StringField LCDataBase = new StringField(META, "DBName", SFieldFlags.SMANDATORY);
     public static final IntField LCPortNum = new IntField(META, "PortNumber", SFieldFlags.SMANDATORY);
     public static final StringField LCUserName = new StringField(META, "User", SFieldFlags.SMANDATORY);
-    public static final StringField LCPassword = new StringField(META, "Password", SFieldFlags.SMANDATORY);
+    public static final EncodedStringField LCPassword = new EncodedStringField(META, "Password", SFieldFlags.SMANDATORY);
     public static final BooleanField LCisSecure = new BooleanField(META, "isSecure", SFieldFlags.SMANDATORY);
 
+    private static final PasswordEditorSource PASSWORD_EDITOR_SOURCE = null;
 
+    static { LCPassword.getFormMeta().setEditorSource(PASSWORD_EDITOR_SOURCE.getSharedInstance()); }
     public Long getId() {
         return getLong(Id);
     }

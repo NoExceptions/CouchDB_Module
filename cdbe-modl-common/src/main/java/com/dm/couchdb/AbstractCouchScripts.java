@@ -18,12 +18,12 @@ public abstract class AbstractCouchScripts implements CouchDBFunctions {
     @ScriptFunction(docBundlePrefix = "AbstractCouchScripts")
     public PyDictionary getData(
             @ScriptArg("ConnectionName") String ConnectionName,
-            @ScriptArg("MangoQuery") String MangoQuery) {
-        return getDataImpl(ConnectionName, MangoQuery);
+            @ScriptArg("MangoQuery") String MangoQuery)  {
+        return getDataImpl(ConnectionName, MangoQuery) ;
 
     }
 
-    protected abstract PyDictionary getDataImpl( String ConnectionName, String MangoQuery);
+    protected abstract PyDictionary getDataImpl( String ConnectionName, String MangoQuery) ;
 
     @Override
     @ScriptFunction(docBundlePrefix = "AbstractCouchScripts")
@@ -33,7 +33,7 @@ public abstract class AbstractCouchScripts implements CouchDBFunctions {
         return getDataDictImpl(ConnectionName, MangoQuery);
     }
 
-    protected abstract PyDictionary getDataDictImpl( String ConnectionName, PyDictionary MangoQuery);
+    protected abstract PyDictionary getDataDictImpl( String ConnectionName, PyDictionary MangoQuery) ;
 
     @Override
     @ScriptFunction(docBundlePrefix = "AbstractCouchScripts")
@@ -49,7 +49,7 @@ public abstract class AbstractCouchScripts implements CouchDBFunctions {
     @ScriptFunction(docBundlePrefix = "AbstractCouchScripts")
     public PyDictionary updateData(
             @ScriptArg("ConnectionName") String ConnectionName,
-            @ScriptArg("Data") PyDictionary Data) {
+            @ScriptArg("Data") PyDictionary Data){
         return updateDataImpl(ConnectionName, Data);
     }
 
@@ -60,8 +60,9 @@ public abstract class AbstractCouchScripts implements CouchDBFunctions {
     public PyDictionary removeData(
             @ScriptArg("ConnectionName") String ConnectionName,
             @ScriptArg("Id") String Id,
-            @ScriptArg("Rev") String Rev) {
-        return removeDataImpl(ConnectionName, Id, Rev);
+            @ScriptArg("Rev") String Rev){
+
+        return removeDataImpl(ConnectionName, Id, Rev) ;
     }
 
 

@@ -16,54 +16,33 @@ public class ClientScriptModule extends AbstractCouchScripts {
     }
 
     @Override
-    protected  PyDictionary saveDataImpl(String conn, PyDictionary data) {
-        try {
+    protected  PyDictionary saveDataImpl(String conn, PyDictionary data)  {
 
-            return rpc.saveData(conn, data);
-        } catch (Exception e) {
-            throw e;
-        }
+        return rpc.saveData(conn, data);
 
     }
 
     @Override
-    protected  PyDictionary removeDataImpl(String connection, String _id, String _rev) {
-        try {
-
-            return rpc.removeData(connection, _id, _rev);
-        } catch (Exception e) {
-            throw e;
-        }
+    protected  PyDictionary removeDataImpl(String connection, String _id, String _rev)  {
+        return rpc.removeData(connection, _id, _rev);
     }
 
     @Override
     protected  PyDictionary getDataImpl(String conn, String mangoQuery) {
-        try {
-            return rpc.getData(conn, mangoQuery);
-        } catch (Exception e) {
-            throw e;
-        }
+        return rpc.getData(conn, mangoQuery);
 
     }
 
     @Override
     protected PyDictionary getDataDictImpl(String ConnectionName, PyDictionary MangoQuery) {
-        try {
 
-            return rpc.getDataDict(ConnectionName, MangoQuery);
-        } catch (Exception e) {
-            throw e;
-        }
+        return rpc.getDataDict(ConnectionName, MangoQuery);
     }
 
     @Override
-    protected  PyDictionary updateDataImpl(String conn, PyDictionary data) {
-        try {
+    protected  PyDictionary updateDataImpl(String conn, PyDictionary data)  {
 
-            return rpc.updateData(conn, data);
-        } catch (Exception e) {
-            throw e;
-        }
+        return rpc.updateData(conn, data);
 
     }
 

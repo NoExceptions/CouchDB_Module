@@ -26,12 +26,7 @@ public class GatewayHook extends AbstractGatewayModuleHook {
 
     public static final ConfigCategory CONFIG_CATEGORY =
             new ConfigCategory("couchdb", "couchdb.nav.header", 700);
-    /**
-     * An IConfigTab contains all the info necessary to create a link to your config page on the gateway nav menu.
-     * In order to make sure the breadcrumb and navigation works properly, the 'name' field should line up
-     * with the right-hand value returned from {ConfigPanel#getMenuLocation}. In this case name("homeconnect")
-     * lines up with HCSettingsPage#getMenuLocation().getRight()
-     */
+
     public static final IConfigTab HCE_CONFIG_ENTRY = DefaultConfigTab.builder()
             .category(CONFIG_CATEGORY)
             .name("couchdb")
@@ -114,37 +109,6 @@ public class GatewayHook extends AbstractGatewayModuleHook {
         logger.debug("Setup Complete.");
     }
 
-    public void maybeCreateHCSettings(GatewayContext context) {
-        logger.trace("Attempting to create HomeConnect Settings Record");
-        try {
-            LCSettingsRecord settingsRecord = context.getLocalPersistenceInterface().createNew(LCSettingsRecord.META);
-            settingsRecord.setId(0L);
-            settingsRecord.setLCConnectionName("MyConn");
-            settingsRecord.setLCNodeName("localhost");
-            settingsRecord.setLCPortNum(8080);
-            settingsRecord.setLCDataBase("People");
-            settingsRecord.setLCUserName("Gabriel");
-            settingsRecord.setLCPassword("123");
-
-            /*
-             * This doesn't override existing settings, only replaces it with these if we didn't
-             * exist already.
-             */
-            context.getSchemaUpdater().ensureRecordExists(settingsRecord);
-        } catch (Exception e) {
-            logger.error("Failed to establish HCSettings Record exists", e);
-        }
-
-        logger.trace("HomeConnect Settings Record Established");
-    }
-
-    /**
-     * The following methods are used by the status panel. Only add these if you are providing a status panel.
-     */
-
-
-    // getMountPathAlias() allows us to use a shorter mount path. Use caution, because we don't want a conflict with
-    // other modules by other authors.
     @Override
     public Optional<String> getMountPathAlias() {
         return Optional.of("hce");
