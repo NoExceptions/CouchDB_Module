@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <artifactId>cdbe-modl</artifactId>
-        <groupId>com.dm.couchdb</groupId>
+        <groupId>br.com.fgltda.couchdb</groupId>
         <version>1.0.0</version>
     </parent>
 
